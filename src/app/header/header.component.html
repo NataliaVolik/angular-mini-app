@@ -1,12 +1,12 @@
 <mat-toolbar
         [ngStyle]="{'background-color':'#3f51b5', 'color':'#ffffff'}"
 >
-    <h3>Angular Mini App</h3>
+    <h3>{{config.header.title}}</h3>
 
-    <button mat-button color="accent" (click)="eventClickBtn(1)">First</button>
-    <button mat-button color="accent" (click)="eventClickBtn(2)">Second</button>
-    <button mat-button color="accent" (click)="eventClickBtn(3)">Three</button>
-    <button mat-button color="accent" (click)="eventClickBtn(4)">Four</button>
-    <button mat-button color="accent" (click)="eventClickBtn(5)">Five</button>
+    <button mat-button color="accent" (click)="eventClickBtn(1)">{{config.header.btn_1}}</button>
+    <button mat-button color="accent" (click)="eventClickBtn(2)">{{config.header.btn_2}}</button>
+    <button mat-button color="accent" (click)="eventClickBtn(3)">{{config.header.btn_3}}</button>
+    <button mat-button color="accent" (click)="eventClickBtn(4)">{{config.header.btn_4}}</button>
+    <button mat-button color="accent" (click)="eventClickBtn(5)">{{config.header.btn_5}}</button>
 
 </mat-toolbar>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {DataServicesService} from "../services/data-services.service";
 
 @Component({
@@ -7,7 +7,7 @@ import {DataServicesService} from "../services/data-services.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  @Input() config : any;
   constructor(
       public eventServicesService : DataServicesService
   ) {

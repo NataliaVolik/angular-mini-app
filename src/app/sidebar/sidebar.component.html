@@ -1,18 +1,18 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened class="sidenav">
-        <button mat-button color="primary" (click)="eventFirstContent(1)">Content 1</button>
-        <button mat-button color="primary" (click)="eventFirstContent(2)">Content 2</button>
-        <button mat-button color="primary" (click)="eventFirstContent(3)">Content 3</button>
-        <button mat-button color="primary" (click)="eventFirstContent(4)">Content 4</button>
+        <button mat-button color="primary" (click)="eventFirstContent(1)">{{config.sidebar.btn_1}}</button>
+        <button mat-button color="primary" (click)="eventFirstContent(2)">{{config.sidebar.btn_2}}</button>
+        <button mat-button color="primary" (click)="eventFirstContent(3)">{{config.sidebar.btn_3}}</button>
+        <button mat-button color="primary" (click)="eventFirstContent(4)">{{config.sidebar.btn_4}}</button>
 
 
-        <button mat-button color="primary" (click)="eventNewContent('hello')">Hi</button>
-        <button mat-button color="primary" (click)="eventNewContent('world')">World</button>
-        <button mat-button color="primary" (click)="eventNewContent('game')">Game</button>
-        <button mat-button color="primary" (click)="eventNewContent('lorem')">Lorem</button>
+        <button mat-button color="primary" (click)="eventNewContent('hello')">{{config.sidebar.btn_5}}</button>
+        <button mat-button color="primary" (click)="eventNewContent('world')">{{config.sidebar.btn_6}}</button>
+        <button mat-button color="primary" (click)="eventNewContent('game')">{{config.sidebar.btn_7}}</button>
+        <button mat-button color="primary" (click)="eventNewContent('lorem')">{{config.sidebar.btn_8}}</button>
     </mat-sidenav>
 
-    <app-content></app-content>
+    <app-content [config]="config"></app-content>
 
 </mat-sidenav-container>
 

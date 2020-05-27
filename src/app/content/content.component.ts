@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {DataServicesService} from "../services/data-services.service";
 import {ThemePalette} from "@angular/material/core";
 
@@ -11,6 +11,8 @@ import {ThemePalette} from "@angular/material/core";
 
 
 export class ContentComponent implements OnInit {
+  @Input () config : any;
+
   firstContent: boolean = false;
   secondContent: boolean = false;
   thirdContent: boolean = false;

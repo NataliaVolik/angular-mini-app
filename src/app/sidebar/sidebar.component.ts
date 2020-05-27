@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {DataServicesService} from "../services/data-services.service";
 
 @Component({
@@ -6,8 +6,9 @@ import {DataServicesService} from "../services/data-services.service";
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
 
+export class SidebarComponent implements OnInit {
+  @Input() config : any;
   constructor(
     public dataServicesService : DataServicesService // инжектет дата сервис (шаг 2)
   ) {
