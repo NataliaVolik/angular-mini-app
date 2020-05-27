@@ -12,6 +12,12 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
 import {DataServicesService} from "./services/data-services.service";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+
 
 @NgModule({
   declarations: [
@@ -27,7 +33,12 @@ import {DataServicesService} from "./services/data-services.service";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatListModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatSlideToggleModule
   ],
   providers: [DataServicesService],
   bootstrap: [AppComponent]

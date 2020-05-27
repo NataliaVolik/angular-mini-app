@@ -1,17 +1,103 @@
-<mat-sidenav-content>
+<mat-sidenav-content  [style.margin-left.px]="24">
     <div *ngIf="firstContent">
-        <h3>Content 1</h3>
+        <h3>Books</h3>
+        <mat-list>
+            <mat-list-item>Item 1</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 2</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 3</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 4</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 5</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Item 6</mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
     </div>
+
+
+
     <div *ngIf="secondContent">
-        <h3>Content 2</h3>
+        <h3>News</h3>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+        </mat-card>
     </div>
+
+
+
     <div *ngIf="thirdContent">
-        <h3>Content 3</h3>
+        <h3>Info</h3>
+        <mat-card class="result">
+            <mat-card-content>
+                <h2 class="example-h2">Result</h2>
+
+                <section class="example-section">
+                    <mat-slide-toggle
+                            class="example-margin"
+                            [color]="color"
+                            [checked]="checked"
+                            [disabled]="disabled">
+                        Slide me!
+                    </mat-slide-toggle>
+                </section>
+            </mat-card-content>
+        </mat-card>
     </div>
+
+
+
     <div *ngIf="fourContent">
-        <h3>Content 4</h3>
+        <h3>Content</h3>
+        <p>
+            <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+        </p>
+
+        <p>
+            Button with a badge on the left
+            <button mat-raised-button color="primary"
+                    matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+                Action
+            </button>
+        </p>
+
+        <p>
+            Icon with a badge
+            <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+            <span class="cdk-visually-hidden">
+                Example with a home icon with overlaid badge showing the number 15
+            </span>
+        </p>
     </div>
     {{myText}}
+
+    <div *ngIf="fiveContent">
+        <h3>Content</h3>
+        <p>
+            Button with a badge on the left
+            <button mat-raised-button color="primary"
+                    matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+                Action
+            </button>
+        </p>
+
+    </div>
 
     <button mat-button color="primary" (click)="getMyData()">Value</button>
 </mat-sidenav-content>

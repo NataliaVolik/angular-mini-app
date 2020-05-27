@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataServicesService} from "../services/data-services.service";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+      public eventServicesService : DataServicesService
+  ) {
 
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    this.eventServicesService.setValue(1);
+  }
+
+  eventClickBtn(number){
+    this.eventServicesService.getClickValue.next(number);
+  }
 }
