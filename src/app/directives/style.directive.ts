@@ -4,7 +4,11 @@ import {Directive, ElementRef, Renderer2, HostListener, Input} from "@angular/co
 })
 export class StyleDirective {
     @Input('appStyle') color : string = 'blue';
-    @Input () fontWeight = 'normal';
+    @Input () dStyles : {
+        border?: string,
+        fontWeight?: string,
+        borderRadius?: string
+    };
     constructor(public elRef : ElementRef, public r: Renderer2){
         // elRef.nativeElement.style.color = 'pink'
         // this.r.setStyle(this.elRef.nativeElement, 'color', 'blue')
@@ -16,11 +20,15 @@ export class StyleDirective {
 
     @HostListener('mouseenter') onEnter() {
         this.r.setStyle(this.elRef.nativeElement, 'color', this.color);
-        this.r.setStyle(this.elRef.nativeElement, 'fontWeight', this.fontWeight);
+        this.r.setStyle(this.elRef.nativeElement, 'fontWeight', this.dStyles.fontWeight);
+        this.r.setStyle(this.elRef.nativeElement, 'border', this.dStyles.border);
+        this.r.setStyle(this.elRef.nativeElement, 'borderRadius', this.dStyles.borderRadius);
     }
 
     @HostListener('mouseleave') onLeave() {
         this.r.setStyle(this.elRef.nativeElement, 'color', null);
         this.r.setStyle(this.elRef.nativeElement, 'fontWeight', null);
+        this.r.setStyle(this.elRef.nativeElement, 'border', null);
+        this.r.setStyle(this.elRef.nativeElement, 'borderRadius', null);
     }
 }
