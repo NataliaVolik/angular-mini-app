@@ -7,15 +7,17 @@ import {DataServicesService} from "../services/data-services.service";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  value = JSON.parse(localStorage.getItem('config'));
   configApp : any;
   constructor(public dataService : DataServicesService) {
     this.dataService.configEvent.subscribe((config)=>{
       this.configApp = config;
-    })
+    });
+    console.log(this.value);
   }
 
   ngOnInit(): void {
-    console.log(localStorage.getItem('config'));
+
   }
 
 }

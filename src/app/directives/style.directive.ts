@@ -15,10 +15,12 @@ export class StyleDirective {
     }
 
     @HostListener('mouseenter') onEnter() {
-        this.r.setStyle(this.elRef.nativeElement, 'color', this.color)
+        this.r.setStyle(this.elRef.nativeElement, 'color', this.color);
+        this.r.setStyle(this.elRef.nativeElement, 'fontWeight', this.fontWeight);
     }
 
     @HostListener('mouseleave') onLeave() {
-        this.r.setStyle(this.elRef.nativeElement, 'color', null)
+        this.r.setStyle(this.elRef.nativeElement, 'color', null);
+        this.r.setStyle(this.elRef.nativeElement, 'fontWeight', null);
     }
 }
