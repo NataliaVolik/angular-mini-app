@@ -1,11 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataServicesService} from "./services/data-services.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   title = 'angular-mini-app';
 
   configApp = {
@@ -65,5 +66,13 @@ export class AppComponent{
       text_3 : 'Lorem ipsum dolor sit.',
       text_4 : 'Powered by Google ©2010-2020.'
     }
+  }
+
+  constructor(public dataServicesService : DataServicesService){
+
+  }
+  ngOnInit(){
+
+     localStorage.setItem('config', JSON.stringify(this.configApp))
   }
 }

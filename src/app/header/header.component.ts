@@ -28,12 +28,10 @@ export class HeaderComponent implements OnInit {
     this.addname = false;
   }
 
-  colorAdd(addcolor){
-    addcolor = true;
-    this.dataServicesService.changeColorClick.next(addcolor);
+  colorAdd(){
+    this.dataServicesService.changeColorClick.next(2);
   }
-  colorRemove(addcolor){
-    addcolor = false;
-    this.dataServicesService.changeColorClick.next(addcolor);
+  colorRemove(){
+    this.dataServicesService.changeColorClick.next(3);
   }
 }

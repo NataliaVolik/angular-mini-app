@@ -13,6 +13,8 @@ export class DataServicesService {
 
   changeColorClick = new Subject();
 
+  configEvent = new Subject();
+
   constructor() { }
 
   getValue(){

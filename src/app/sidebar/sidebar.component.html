@@ -12,7 +12,8 @@
         <button mat-button color="primary" (click)="eventNewContent('lorem')">{{config.sidebar.btn_8}}</button>
     </mat-sidenav>
 
-    <app-content [config]="config"></app-content>
+
+    <router-outlet></router-outlet>
 
 </mat-sidenav-container>
 

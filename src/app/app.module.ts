@@ -17,7 +17,27 @@ import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {StyleDirective} from "./directives/style.directive";
+import {Routes, RouterModule} from "@angular/router";
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
+const routers : Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  }
+
+];
 
 @NgModule({
   declarations: [
@@ -25,7 +45,10 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+      StyleDirective,
+      HomeComponent,
+      AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +61,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     MatListModule,
     MatCardModule,
     MatBadgeModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+      RouterModule.forRoot(routers)
   ],
   providers: [DataServicesService],
   bootstrap: [AppComponent]

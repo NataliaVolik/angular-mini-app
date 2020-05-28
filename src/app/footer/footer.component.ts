@@ -15,16 +15,21 @@ export class FooterComponent implements OnInit {
 
 
     this.dataServicesService.changeColorClick.subscribe((value)=>{
-      this.addcolor = value;
+      this.changeABC(value);
+
     })
   }
 
   ngOnInit(): void {
   }
 
-  // changeColor(value){
-  //   this.addcolor = true;
-  //
-  // }
-
+  changeABC(value){
+    // this.addcolor = value;
+    // if (value === 3 ) {
+    //   this.addcolor = true;
+    // } else  {
+    //   this.addcolor = false;
+    // }
+    this.addcolor = value === 3;
+  }
 }
