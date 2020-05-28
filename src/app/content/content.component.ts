@@ -25,7 +25,7 @@ export class ContentComponent implements OnInit {
   disabled = false;
 
 
-  constructor(public dataServicesService : DataServicesService, public eventServicesService : DataServicesService) {  // инжектет дата сервис (шаг 2)
+  constructor(public dataServicesService : DataServicesService) {  // инжектет дата сервис (шаг 2)
     this.dataServicesService.getClickValue.subscribe((value)=>{
       this.changeContent(value)
     });
@@ -35,9 +35,9 @@ export class ContentComponent implements OnInit {
       this.myText = newText;
     });
 
-    this.eventServicesService.getClickValue.subscribe((value)=>{
-      this.changeContent(value)
-    })
+    // this.eventServicesService.getClickValue.subscribe((value)=>{
+    //   this.changeContent(value)
+    // })
 
   }
 

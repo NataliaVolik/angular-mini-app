@@ -11,6 +11,8 @@ export class DataServicesService {
 
   moveEvent = new Subject(); // создаю событие в сервисе
 
+  changeColorClick = new Subject();
+
   constructor() { }
 
   getValue(){

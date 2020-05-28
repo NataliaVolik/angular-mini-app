@@ -1,4 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {DataServicesService} from "../services/data-services.service";
 
 
 @Component({
@@ -7,10 +8,23 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+   addcolor : boolean;
+
   @Input () config : any;
-  constructor() { }
+  constructor(public dataServicesService : DataServicesService) {
+
+
+    this.dataServicesService.changeColorClick.subscribe((value)=>{
+      this.addcolor = value;
+    })
+  }
 
   ngOnInit(): void {
   }
+
+  // changeColor(value){
+  //   this.addcolor = true;
+  //
+  // }
 
 }

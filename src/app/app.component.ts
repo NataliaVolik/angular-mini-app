@@ -15,7 +15,9 @@ export class AppComponent{
       btn_2 : 'Second',
       btn_3 : 'Three',
       btn_4 : 'Four',
-      btn_5 : 'Five'
+      btn_5 : 'Five',
+      btn_6 : 'Six',
+      btn_7 : 'Seven'
     },
     content : {
        title_1 : 'Books',
