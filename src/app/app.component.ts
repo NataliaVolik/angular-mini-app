@@ -8,6 +8,7 @@ import {DataServicesService} from "./services/data-services.service";
 })
 export class AppComponent implements OnInit{
   title = 'angular-mini-app';
+    isVisible = true;
 
   configApp = {
     header : {

@@ -8,6 +8,15 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, rem!
 </p>
 
+<button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+
+<div  *ngIf="isVisible" class="wrap">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Consectetur consequatur distinctio explicabo ipsam laboriosam
+        nulla praesentium quam sequi tenetur ullam?
+    </p>
+</div>
+
 <app-sidebar [config]="configApp"></app-sidebar>
 
 
